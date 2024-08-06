@@ -2,7 +2,7 @@
 
 **Simple CGM Monitor: A Glucose Tracking Solution for Diabetes Management and Personal Optimization.**
 
-> [!INFO]
+> [!WARNING]
 > This project is not actively maintained and no support is available. But hopefully it will be useful for other developers as a starting point.
 
 ![](screenshot.png)
