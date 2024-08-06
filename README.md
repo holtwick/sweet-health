@@ -2,9 +2,6 @@
 
 **Simple CGM Monitor: A Glucose Tracking Solution for Diabetes Management and Personal Optimization.**
 
-> [!WARNING]
-> This project is not actively maintained and no support is available. But hopefully it will be useful for other developers as a starting point.
-
 ![](screenshot.png)
 
 ### Supported Sensors
@@ -28,3 +25,8 @@ Open http://localhost:8080 and go to "admin" in the lower right corner to set up
 - Use of an independent, open data format.
 - Possibility to carry out your own analyses.
 - Flexibility in the further use of the data.
+
+---
+
+> [!WARNING]
+> This project is not actively maintained and no support is available. But hopefully it will be useful for other developers as a starting point.
