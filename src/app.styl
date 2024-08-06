@@ -1,0 +1,57 @@
+@require "oui-kit/stylus/default-app";
+
+oui-fix();
+
+:root {
+  --state-ok: -green-500;
+  --state-warn: -yellow-500;
+  --state-critical: -red-500;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+// oui-reset();
+body {
+  font-family: var(--font);
+  padding: 0;
+  margin: 0;
+}
+
+.default {
+  color: var(--fg);
+  background-color: var(--bg);
+  padding: 16;
+}
+
+oui-debug();
+
+#app {
+  height: 100%;
+  use: stack-y;
+}
+
+.app-offline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: -safe-bottom;
+  background: rgba(255, 166, 0, 0.9);
+  font-weight: 600;
+
+  div {
+    text-align: center;
+    padding: 16;
+  }
+}

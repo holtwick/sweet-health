@@ -1,0 +1,58 @@
+@require "oui-kit/stylus";
+
+.app-events {
+  padding: 16;
+  height: 100%;
+  use: scroll;
+  use: stack-y;
+
+  .oui-tableview {
+    height: 100%;
+  }
+
+  gap: 8;
+
+  &-item {
+    padding: 8;
+    border: 1px solid var(--t3-bg);
+    border-radius: 8;
+    cursor: pointer;
+    use: stack-x;
+
+    &:hover {
+      background: var(--t3-bg);
+    }
+
+    @media -mobile {
+      use: stack-y;
+      gap: 8;
+    }
+  }
+
+  &-left {
+    use: grow;
+    use: stack-y;
+    gap: 8;
+  }
+
+  &-title {
+    font-weight: 600;
+  }
+
+  &-graph {
+    use: stack-x;
+    gap: 16;
+
+    svg {
+      height: 48px;
+    }
+
+    &-details {
+      padding: 6;
+      border-radius: 4;
+      font-family: monospace;
+      font-size: 11;
+      background: var(--t3-bg);
+    }
+  }
+}

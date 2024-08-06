@@ -1,0 +1,76 @@
+@require "oui-kit/stylus";
+
+$col1 = 120;
+
+.app-print {
+  padding: 16;
+  height: 100%;
+  // use: scroll;
+  use: stack-y;
+  gap: 16;
+
+  h1 {
+    font-weight: 600;
+    font-size: 52;
+    margin: 0;
+  }
+
+  p {
+    margin-y: 0;
+    max-width: 60ch;
+  }
+
+  ._header {
+    use: stack-x;
+    font-size: 24;
+    margin-top: 40;
+    margin-bottom: 16;
+    break-before: auto;
+    break-inside: avoid;
+    break-after: avoid;
+
+    ._weekday {
+      font-weight: 800;
+      min-width: $col1;
+    }
+  }
+
+  .oui-tableview {
+    height: 100%;
+  }
+
+  ._item {
+    use: stack-x;
+    break-inside: avoid;
+  }
+
+  ._time {
+    font-size: 24;
+    font-weight: 600;
+    min-width: $col1;
+    use: center;
+  }
+
+  ._text {
+    font-weight: 600;
+    margin-left: 32;
+    use: center;
+  }
+
+  ._graph {
+    use: stack-x;
+    gap: 16;
+
+    svg {
+      height: 48px;
+    }
+
+    ._details {
+      padding: 6;
+      border-radius: 4;
+      font-family: monospace;
+      font-size: 11;
+      background: var(--t3-bg);
+    }
+  }
+}

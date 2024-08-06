@@ -1,0 +1,50 @@
+@require "oui-kit/stylus";
+
+.app-index {
+  height: 100%;
+  use: scroll;
+  use: stack-y;
+
+  footer {
+    padding: 24;
+    padding-top: 0;
+    color: var(--s2-fg);
+    font-size: 80%;
+    use: stack-x;
+
+    :first-child {
+      use: grow;
+    }
+
+    button {
+      cursor: pointer;
+    }
+  }
+
+  .menu {
+    use: grow;
+    use: stack-y;
+    use: scroll;
+    gap: 24;
+    padding: 24;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 24;
+      font-size: 24;
+      font-weight: 600;
+      background: var(--p1-bg);
+      // border: 2px solid -orange-500;
+      border-radius: 8;
+      text-align: center;
+
+      &:hover {
+        color: -blue-600;
+        border-color: -blue-600;
+        background: #eee;
+      }
+    }
+  }
+}

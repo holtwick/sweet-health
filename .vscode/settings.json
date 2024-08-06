@@ -1,0 +1,74 @@
+{
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "format/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ],
+
+  "explorer.fileNesting.expand": false,
+  "files.exclude": {
+    "pnpm-lock.yaml": true,
+    "www": false
+  },
+  "i18n-ally.displayLanguage": "de",
+  "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": "locales",
+  "i18n-ally.sortKeys": true,
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.translate.deepl.useFreeApiEntry": true,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "jestrunner.jestCommand": "ZEED=* ZEED_COLOR=1 LOG=zeed.log pnpm exec vitest --run",
+  "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "vitest.commandLine": "pnpm exec vitest",
+  "vitest.enable": true,
+  "vitest.exclude": [
+    "**/node_modules/**",
+    "**/dist*/**",
+    "**/www/**",
+    "**/data/**",
+    "**/geoip/**",
+    "**/_archive/**",
+    "**/cypress/**",
+    "**/.{idea,git,cache,output,temp,vscode}/**"
+  ],
+  "vitest.include": [
+    "**/*.{client,test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

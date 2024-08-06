@@ -1,0 +1,1 @@
+The SQLite database will go into this folder.

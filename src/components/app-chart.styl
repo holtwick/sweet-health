@@ -1,0 +1,100 @@
+@require "oui-kit/stylus";
+
+body input[type=range] {
+  appearance: auto;
+}
+
+.value {
+  use: stack-x;
+  use: center;
+  gap: 16;
+  font-size: 40;
+  white-space: nowrap;
+  margin-y: 16;
+}
+
+.date {
+  opacity: 0.5;
+  margin-bottom: 8;
+  text-align: center;
+}
+
+.datebutton {
+  color: -blue-500;
+
+  svg {
+    size: 0.8em;
+    stroke-width: 2;
+  }
+}
+
+.table {
+  use: center;
+  margin-y: 16;
+}
+
+table {
+  td:nth-child(2) {
+    padding-left: 32;
+    text-align: right;
+  }
+}
+
+[data-rating=green] {
+  color: var(--state-ok);
+}
+
+[data-rating=yellow] {
+  color: var(--state-warn);
+}
+
+[data-rating=red] {
+  color: var(--state-critical);
+}
+
+.trend {
+  svg {
+    size: 0.9em;
+  }
+
+  &[data-trend="-3"] {
+    color: var(--state-critical);
+  }
+
+  &[data-trend="-2"] {
+    color: var(--state-critical);
+  }
+
+  &[data-trend="-1"] {
+    color: var(--state-warn);
+  }
+
+  &[data-trend="0"] {
+    color: var(--state-ok);
+  }
+
+  &[data-trend="1"] {
+    color: var(--state-warn);
+  }
+
+  &[data-trend="2"] {
+    color: var(--state-critical);
+  }
+
+  &[data-trend="3"] {
+    color: var(--state-critical);
+  }
+}
+
+.oui-table {
+  oui-table();
+}
+
+.chart {
+  background: #f6f6f6;
+  use: grow;
+}
+
+.header {
+  padding-top: 24;
+}

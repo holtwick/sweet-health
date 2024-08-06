@@ -1,0 +1,56 @@
+@require "oui-kit/stylus";
+
+.app-view {
+  use: stack-y;
+  height: 100%;
+  background: yellow;
+
+  &-header {
+    use: stack-x;
+    min-height: 44;
+    gap: 8;
+    padding: 0 4;
+    background: var(--p1-bg);
+
+    a, button {
+      padding: 16 8;
+      text-decoration: none;
+      color: inherit;
+      // border-radius: 4;
+      use: stack-x;
+      gap: 4;
+      line-height: 1;
+      cursor: pointer;
+
+      svg {
+        size: 1em;
+      }
+    }
+
+    @media -mobile {
+      order: 1;
+      padding-bottom: -safe-bottom;
+      font-size: 24;
+
+      a, button {
+        padding: 12;
+      }
+
+      em {
+        display: none;
+      }
+    }
+
+    .router-link-exact-active {
+      color: var(--p1-fg);
+      // font-weight: 600;
+      // border-bottom: 4px solid var(--p1-fg);
+      // color: var(--bg);
+    }
+  }
+
+  &-body {
+    use: stack-y;
+    use: stack-item-grow;
+  }
+}
